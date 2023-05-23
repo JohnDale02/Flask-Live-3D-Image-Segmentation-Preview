@@ -35,6 +35,8 @@ def typo():
         image = form.file.data
         image.save(os.path.join(os.path.abspath(os.path.dirname(__file__)), UPLOAD_FOLDER ,secure_filename(image.filename)))
         #return render_template()
+        # Start loading bar while waiting... --> run our c++ appication --> input that to OpenGL --> emscripten --> back to website
+        # return the resource back --> (WebGl javascript)
     
     return render_template('typography.html', form=form)
 
